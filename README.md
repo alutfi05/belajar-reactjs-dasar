@@ -1,5 +1,9 @@
 # React Fundamentals
 
+#### Project Link
+
+-   https://belajar-reactjs-dasar.netlify.app/
+
 #### Folder Structure
 
 -   node_modules
@@ -73,14 +77,14 @@ export default Greeting;
 index.js
 
 ```js
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
 function Greeting() {
     return <h2>My First Component</h2>;
 }
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(<Greeting />);
 ```
@@ -148,7 +152,7 @@ index.js
 
 ```js
 const Greeting = () => {
-    return React.createElement("h2", {}, "hello world");
+    return React.createElement('h2', {}, 'hello world');
 };
 ```
 
@@ -163,9 +167,9 @@ function Greeting() {
 
 const Greeting = () => {
     return React.createElement(
-        "div",
+        'div',
         {},
-        React.createElement("h2", {}, "hello world")
+        React.createElement('h2', {}, 'hello world')
     );
 };
 ```
@@ -268,8 +272,8 @@ const Message = () => {
 -   setup structure
 
 ```js
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
 function BookList() {
     return (
@@ -298,7 +302,7 @@ const Title = () => {
 };
 const Author = () => <h4>Author</h4>;
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(<BookList />);
 ```
@@ -311,8 +315,8 @@ root.render(<BookList />);
 -   copy image, title and author
 
 ```js
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
 function BookList() {
     return (
@@ -346,7 +350,7 @@ const Title = () => {
 };
 const Author = () => <h4>Jordan Moore </h4>;
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(<BookList />);
 ```
@@ -363,8 +367,8 @@ root.render(<BookList />);
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background: #f1f5f8;
     color: #222;
 }
@@ -373,7 +377,7 @@ body {
 -   import file and add classes
 
 ```js
-import "./index.css";
+import './index.css';
 
 function BookList() {
     return (
@@ -462,7 +466,7 @@ const Image = () => (
 
 ```js
 const Author = () => (
-    <h4 style={{ color: "#617d98", fontSize: "0.75rem", marginTop: "0.5rem" }}>
+    <h4 style={{ color: '#617d98', fontSize: '0.75rem', marginTop: '0.5rem' }}>
         Jordan Moore
     </h4>
 );
@@ -488,9 +492,9 @@ const Author = () => (
 ```js
 const Author = () => {
     const inlineHeadingStyles = {
-        color: "#617d98",
-        fontSize: "0.75rem",
-        marginTop: "0.5rem",
+        color: '#617d98',
+        fontSize: '0.75rem',
+        marginTop: '0.5rem',
     };
     return <h4 style={inlineHeadingStyles}>Jordan Moore </h4>;
 };
@@ -533,9 +537,9 @@ const Book = () => {
     can't be a statement
 
 ```js
-const author = "Jordan Moore";
+const author = 'Jordan Moore';
 const Book = () => {
-    const title = "Interesting Facts For Curious Mindssssss";
+    const title = 'Interesting Facts For Curious Mindssssss';
     return (
         <article className="book">
             <img
@@ -559,9 +563,9 @@ const Book = () => {
 -   refactor/clean up
 
 ```js
-const author = "Jordan Moore";
-const title = "Interesting Facts For Curious Minds";
-const img = "./images/book-1.jpg";
+const author = 'Jordan Moore';
+const title = 'Interesting Facts For Curious Minds';
+const img = './images/book-1.jpg';
 
 function BookList() {
     return (
@@ -588,7 +592,7 @@ const someFunc = (param1, param2) => {
     console.log(param1, param2);
 };
 // arguments
-someFunc("job", "developer");
+someFunc('job', 'developer');
 ```
 
 ```js
@@ -665,14 +669,14 @@ const Book = (props) => {
 
 ```js
 const firstBook = {
-    author: "Jordan Moore",
-    title: "Interesting Facts For Curious Minds",
-    img: "./images/book-1.jpg",
+    author: 'Jordan Moore',
+    title: 'Interesting Facts For Curious Minds',
+    img: './images/book-1.jpg',
 };
 const secondBook = {
-    author: "James Clear",
-    title: "Atomic Habits",
-    img: "https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL900_SR900,600_.jpg",
+    author: 'James Clear',
+    title: 'Atomic Habits',
+    img: 'https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL900_SR900,600_.jpg',
 };
 
 function BookList() {
@@ -717,9 +721,9 @@ const Book = (props) => {
 
 ```js
 const someObject = {
-    name: "john",
-    job: "developer",
-    location: "florida",
+    name: 'john',
+    job: 'developer',
+    location: 'florida',
 };
 
 console.log(someObject.name);
@@ -830,14 +834,14 @@ const Book = (props) => {
 ```js
 const books = [
     {
-        author: "Jordan Moore",
-        title: "Interesting Facts For Curious Minds",
-        img: "./images/book-1.jpg",
+        author: 'Jordan Moore',
+        title: 'Interesting Facts For Curious Minds',
+        img: './images/book-1.jpg',
     },
     {
-        author: "James Clear",
-        title: "Atomic Habits",
-        img: "https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL900_SR900,600_.jpg",
+        author: 'James Clear',
+        title: 'Atomic Habits',
+        img: 'https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL900_SR900,600_.jpg',
     },
 ];
 
@@ -869,7 +873,7 @@ function BookList() {
 -   map - creates a new array from calling a function for every array element.
 
 ```js
-const names = ["john", "peter", "susan"];
+const names = ['john', 'peter', 'susan'];
 const newNames = names.map((name) => {
     console.log(name);
     return <h1>{name}</h1>;
@@ -927,15 +931,15 @@ function BookList() {
 ```js
 const books = [
     {
-        author: "Jordan Moore",
-        title: "Interesting Facts For Curious Minds",
-        img: "./images/book-1.jpg",
+        author: 'Jordan Moore',
+        title: 'Interesting Facts For Curious Minds',
+        img: './images/book-1.jpg',
         id: 1,
     },
     {
-        author: "James Clear",
-        title: "Atomic Habits",
-        img: "https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL900_SR900,600_.jpg",
+        author: 'James Clear',
+        title: 'Atomic Habits',
+        img: 'https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL900_SR900,600_.jpg',
         id: 2,
     },
 ];
@@ -1023,16 +1027,16 @@ const Book = ({ book: { img, title, author } }) => {
 -   [JS Nuggets - Spread Operator](https://www.youtube.com/watch?v=4Zyr5a3m0Fc&list=PLnHJACx3NwAfRUcuKaYhZ6T5NRIpzgNGJ&index=10)
 
 ```js
-const friends = ["john", "peter", "anna"];
-const newFriends = [...friends, "susan"];
+const friends = ['john', 'peter', 'anna'];
+const newFriends = [...friends, 'susan'];
 console.log(friends);
 console.log(newFriends);
 const someObject = {
-    name: "john",
-    job: "developer",
+    name: 'john',
+    job: 'developer',
 };
 // COPY NOT A REFERENCE !!!!
-const newObject = { ...someObject, location: "florida" };
+const newObject = { ...someObject, location: 'florida' };
 console.log(someObject);
 console.log(newObject);
 ```
@@ -1068,9 +1072,9 @@ const Book = ({ img, title, author }) => {
 -   Vanilla JS
 
 ```js
-const btn = document.getElementById("btn");
+const btn = document.getElementById('btn');
 
-btn.addEventListener("click", function (e) {
+btn.addEventListener('click', function (e) {
     // access event object
     // do something when event fires
 });
@@ -1083,7 +1087,7 @@ btn.addEventListener("click", function (e) {
 ```js
 const EventExamples = () => {
     const handleButtonClick = () => {
-        alert("handle button click");
+        alert('handle button click');
     };
     return (
         <section>
@@ -1114,10 +1118,10 @@ function BookList() {
 
 const EventExamples = () => {
     const handleFormInput = () => {
-        console.log("handle form input");
+        console.log('handle form input');
     };
     const handleButtonClick = () => {
-        alert("handle button click");
+        alert('handle button click');
     };
     return (
         <section>
@@ -1127,7 +1131,7 @@ const EventExamples = () => {
                     type="text"
                     name="example"
                     onChange={handleFormInput}
-                    style={{ margin: "1rem 0" }}
+                    style={{ margin: '1rem 0' }}
                 />
             </form>
             <button onClick={handleButtonClick}>click me</button>
@@ -1148,11 +1152,11 @@ const EventExamples = () => {
         // console.log('handle form input');
     };
     const handleButtonClick = () => {
-        alert("handle button click");
+        alert('handle button click');
     };
     const handleFormSubmission = (e) => {
         e.preventDefault();
-        console.log("form submitted");
+        console.log('form submitted');
     };
     return (
         <section>
@@ -1163,7 +1167,7 @@ const EventExamples = () => {
                     type="text"
                     name="example"
                     onChange={handleFormInput}
-                    style={{ margin: "1rem 0" }}
+                    style={{ margin: '1rem 0' }}
                 />
                 {/* add button with type='submit' */}
                 <button type="submit">submit form</button>
@@ -1192,7 +1196,7 @@ const EventExamples = () => {
 const EventExamples = () => {
     return (
         <section>
-            <button onClick={() => console.log("hello there")}>click me</button>
+            <button onClick={() => console.log('hello there')}>click me</button>
         </section>
     );
 };
@@ -1210,10 +1214,10 @@ const EventExamples = () => {
                     type="text"
                     name="example"
                     onChange={(e) => console.log(e.target.value)}
-                    style={{ margin: "1rem 0" }}
+                    style={{ margin: '1rem 0' }}
                 />
             </form>
-            <button onClick={() => console.log("you clicked me")}>
+            <button onClick={() => console.log('you clicked me')}>
                 click me
             </button>
         </section>
@@ -1263,7 +1267,7 @@ const Book = (props) => {
 
 ```js
 function BookList() {
-    const someValue = "shakeAndBake";
+    const someValue = 'shakeAndBake';
     const displayValue = () => {
         console.log(someValue);
     };
@@ -1416,15 +1420,15 @@ books.js
 ```js
 const books = [
     {
-        author: "Jordan Moore",
-        title: "Interesting Facts For Curious Minds",
-        img: "./images/book-1.jpg",
+        author: 'Jordan Moore',
+        title: 'Interesting Facts For Curious Minds',
+        img: './images/book-1.jpg',
         id: 1,
     },
     {
-        author: "James Clear",
-        title: "Atomic Habits",
-        img: "https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL900_SR900,600_.jpg",
+        author: 'James Clear',
+        title: 'Atomic Habits',
+        img: 'https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL900_SR900,600_.jpg',
         id: 2,
     },
 ];
@@ -1440,15 +1444,15 @@ const books = [
 ```js
 export const books = [
     {
-        author: "Jordan Moore",
-        title: "Interesting Facts For Curious Minds",
-        img: "./images/book-1.jpg",
+        author: 'Jordan Moore',
+        title: 'Interesting Facts For Curious Minds',
+        img: './images/book-1.jpg',
         id: 1,
     },
     {
-        author: "James Clear",
-        title: "Atomic Habits",
-        img: "https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL900_SR900,600_.jpg",
+        author: 'James Clear',
+        title: 'Atomic Habits',
+        img: 'https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL900_SR900,600_.jpg',
         id: 2,
     },
 ];
@@ -1457,7 +1461,7 @@ export const books = [
 index.js
 
 ```js
-import { books } from "./books";
+import { books } from './books';
 ```
 
 -   default export
@@ -1482,7 +1486,7 @@ export default Book;
 index.js
 
 ```js
-import Book from "./Book";
+import Book from './Book';
 ```
 
 #### Local Images (src folder)
@@ -1496,26 +1500,26 @@ import Book from "./Book";
 -   and yes each image requires new import
 
 ```js
-import img1 from "./images/book-1.jpg";
-import img2 from "./images/book-2.jpg";
-import img3 from "./images/book-3.jpg";
+import img1 from './images/book-1.jpg';
+import img2 from './images/book-2.jpg';
+import img3 from './images/book-3.jpg';
 
 export const books = [
     {
-        author: "Jordan Moore",
-        title: "Interesting Facts For Curious Minds",
+        author: 'Jordan Moore',
+        title: 'Interesting Facts For Curious Minds',
         img: img1,
         id: 1,
     },
     {
-        author: "James Clear",
-        title: "Atomic Habits",
+        author: 'James Clear',
+        title: 'Atomic Habits',
         img: img2,
         id: 2,
     },
     {
-        author: "Stephen King",
-        title: "Fairy Tale",
+        author: 'Stephen King',
+        title: 'Fairy Tale',
         img: img3,
         id: 3,
     },
@@ -1637,22 +1641,22 @@ public/index.html
 -   index.js
 
 ```js
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
 // styles (typically global)
-import "./index.css";
+import './index.css';
 
 // convention to name it App and setup in a separate file
-import App from "./App";
+import App from './App';
 // import report web vitals
-import reportWebVitals from "./reportWebVitals";
+import reportWebVitals from './reportWebVitals';
 
 // StrictMode
 
 // StrictMode is a tool for highlighting potential problems in an application.Activates additional checks and warnings for its descendants.Runs only in Development, does not impact the production build. RENDERS TWICE !!! Possible to remove.
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <App />
