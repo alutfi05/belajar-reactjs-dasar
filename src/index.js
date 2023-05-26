@@ -3,37 +3,34 @@ import ReactDOM from 'react-dom/client';
 
 import './index.css';
 
-const firstBook = {
-    author: 'Bessel van der Kolk M.D.',
-    title: 'The Body Keeps the Score',
-    img: './images/book-1.jpg',
-};
-
-const secondBook = {
-    author: 'James Clear',
-    title: 'Atomic Habits',
-    img: 'https://images-na.ssl-images-amazon.com/images/I/81bGKUa1e0L._AC_UL600_SR600,400_.jpg',
-};
+const books = [
+    {
+        author: 'Bessel van der Kolk M.D.',
+        title: 'The Body Keeps the Score',
+        img: './images/book-1.jpg',
+        id: 1,
+    },
+    {
+        author: 'James Clear',
+        title: 'Atomic Habits',
+        img: 'https://images-na.ssl-images-amazon.com/images/I/81bGKUa1e0L._AC_UL600_SR600,400_.jpg',
+        id: 2,
+    },
+];
 
 const BookList = () => {
     return (
         <section className="booklist">
-            <Book
-                img={firstBook.img}
-                title={firstBook.title}
-                author={firstBook.author}
-            />
-            <Book
-                img={secondBook.img}
-                title={secondBook.title}
-                author={secondBook.author}
-            />
+            {books.map((book) => {
+                return <Book {...book} key={book.id} />;
+            })}
         </section>
     );
 };
 
 const Book = (props) => {
     const { img, title, author } = props;
+    console.log(props);
     return (
         <article className="book">
             <img src={img} alt={title} />
